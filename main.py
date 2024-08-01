@@ -2,14 +2,14 @@ from gensim.models.doc2vec import Doc2Vec
 import os
 from nltk.tokenize import word_tokenize
 from nltk import sent_tokenize
-# from nltk import download as nltkdownload
+from nltk import download as nltkdownload
 from sklearn.metrics.pairwise import cosine_similarity
 import random
 import operator
 import streamlit as st
 
-# nltkdownload('punkt')   # 토큰화 프로그램
-# nltkdownload('wordnet') # 표제어 추출 프로그램
+nltkdownload('punkt')   # 토큰화 프로그램
+nltkdownload('wordnet') # 표제어 추출 프로그램
 
 raw_data_ans = open('[Dataset] Module27 (ans).txt','r').read()
 raw_data_ques = open('[Dataset] Module27(ques).txt','r').read()
